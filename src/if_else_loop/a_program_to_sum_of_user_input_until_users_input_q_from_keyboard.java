@@ -12,25 +12,32 @@ public class a_program_to_sum_of_user_input_until_users_input_q_from_keyboard {
 
 
 
-            restart:
+        try {
+
+
             while (true){
                 String input_string=sc.nextLine();
 
 //                input_string=sc.nextLine();
-                if(input_string=="q"){
+                if(input_string.equals("q")){
 
                     break;
                 }
-                else if (input_string!="q"){
+                else {
                     int input_int=Integer.parseInt(input_string);
                     sum+=input_int;
-                    continue restart;
 
                 }
 
 
             }
 
+        }
+        catch (Exception e){
+
+            System.out.println(sum);
+
+        }
 
 
     }
